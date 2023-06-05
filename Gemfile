@@ -51,6 +51,7 @@ gem 'bootsnap', require: false
 # Use the cancancan gem to add role-based authorization
 # See [https://github.com/CanCanCommunity/cancancan#installation]
 gem 'cancancan'
+gem 'devise'
 
 # Use the devise gem as the session and account manager for the application
 # [https://github.com/heartcombo/devise#getting-started]
