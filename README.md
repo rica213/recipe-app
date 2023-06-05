@@ -37,41 +37,13 @@ Also, the app should allow you to make them public so anyone can access them.
 
 ## 📌 Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Testing Framework</summary>
-  <ul>
-    <li><a href="https://github.com/rspec/rspec-rails">RSpec Rails</a></li>
-    <li><a href="https://rubydoc.info/github/teamcapybara/capybara">Capybara</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Authentication</summary>
-  <ul>
-    <li><a href="https://github.com/heartcombo/devise#getting-started">Devise</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Authorization</summary>
-  <ul>
-    <li><a href="https://github.com/CanCanCommunity/cancancan#installation">cancancan</a></li>
-  </ul>
-</details>
+| Domain | Tech Stack |
+|--------|--------|
+| Server | <a href="https://rubyonrails.org/">Ruby on Rails</a> |
+| Database | <a href="https://www.postgresql.org/">PostgreSQL</a> |
+| Testing Framework | <a href="https://github.com/rspec/rspec-rails">RSpec Rails,</a> <a href="https://rubydoc.info/github/teamcapybara/capybara">Capybara</a> |
+| Authentification | <a href="https://github.com/heartcombo/devise#getting-started">Devise</a> |
+| Authorization | <a href="https://github.com/CanCanCommunity/cancancan#installation">cancancan</a> | 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- Features -->
