@@ -13,7 +13,7 @@
       <%= link_to "RecipeApp", root_path, class: 'logo' %>
       <nav id="desktop-nav" class="hidden">
         <ul class="menu_pages">
-          <li><%= link_to "Public Recipes", {controller: 'recipes', action: 'public_recipes'} %></li>
+          <li><%= link_to "Public Recipes", public_recipes_path %></li>
           <li><%= link_to "Recipes", recipes_path %></li>
           <li><%= link_to "Foods", foods_path %></li>
         </ul>
@@ -33,6 +33,6 @@
         </menu>
       </header>
       <%= yield %>
-      <script src="/app/javascript/menu/menu_toggle.js"></script>
+      <script src="./../../../app/javascript/menu/menu_toggle.js"></script>
     </body>
   </html>
