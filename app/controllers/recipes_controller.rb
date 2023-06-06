@@ -8,4 +8,6 @@ class RecipesController < ApplicationController
   def create; end
 
   def destroy; end
+
+  def public_recipes; end
 end
