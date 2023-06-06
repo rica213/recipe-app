@@ -6,7 +6,6 @@ const menuOptions = document.querySelectorAll("#desktop-nav li a");
 
 /* Toggle menu on mobile */
 const toggleMenu = () => {
-  console.log("say something");
   nav.classList.toggle("hidden");
   nav.classList.toggle("popup-menu");
   body.classList.toggle("no-scroll");
