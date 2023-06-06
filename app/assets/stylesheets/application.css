@@ -130,7 +130,6 @@ nav li {
 
 /* end navigation toolbar */
 
-
 .user-reg {
   display: flex;
   flex-direction: column;
@@ -144,4 +143,3 @@ nav li {
   flex-direction: column;
   row-gap: 1rem;
 }
-
