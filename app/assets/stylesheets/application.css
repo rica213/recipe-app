@@ -143,3 +143,20 @@ nav li {
   flex-direction: column;
   row-gap: 1rem;
 }
+
+.food-btn {
+  padding: 5px;
+}
+
+.food-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.add-food-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

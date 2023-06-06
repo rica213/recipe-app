@@ -1,2 +1,34 @@
-<h1>Foods#new</h1>
-<p>Find me in app/views/foods/new.html.erb</p>
+<head>
+  <%= stylesheet_link_tag 'application.css'%>
+</head>
+
+<div class="add-food-form">
+    <h2>Add New Food</h2><br>
+
+    <%= form_with model: @food, method: :post, local: true do |f| %>
+
+    <% if @food.errors.any? %>
+            <div>
+                <% @food.errors.full_messages.each do |message| %>
+                    <div><%= message.inspect %></div>
+                <% end %>
+            </div>
+        <% end %>
+    <div class="food-form">
+        <%= f.label :name %>
+        <%= f.text_field :name, required: true %>
+
+        <%= f.label :measurement_unit %>
+        <%= f.text_field :measurement_unit, required: true%>
+
+        <%= f.label :price %>
+        <%= f.number_field :price, required: true %>
+
+        <%= f.label :quantity %>
+        <%= f.number_field :quantity, required: true %>
+
+
+        <%= f.submit 'Create Food' %>
+    </div>
+    <% end %>
+</div>

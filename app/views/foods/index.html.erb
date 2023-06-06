@@ -1,2 +1,11 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<head>
+  <%= stylesheet_link_tag 'application.css'%>
+</head>
+
+ <div>
+    <button class="food-btn">
+        <%= link_to 'Add Food', new_food_path %>
+    </button>
+
+    <table></table>
+ </div>
