@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 html {
   font-size: calc(15px + 0.390625vw);
 }
@@ -128,3 +129,19 @@ nav li {
 }
 
 /* end navigation toolbar */
+
+
+.user-reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.user-fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
