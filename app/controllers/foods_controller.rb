@@ -24,7 +24,6 @@ class FoodsController < ApplicationController
       redirect_to foods_path, notice: 'Food deleted successfully'
     else
       redirect_to foods_path, notice: 'Something went wrong food could not be deleted'
-  
     end
   end
 

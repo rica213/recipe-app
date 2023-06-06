@@ -166,27 +166,24 @@ nav li {
 .food-table {
   border-collapse: collapse;
   width: 50%;
+  margin: 0 auto;
 }
 
-.food-table th, .food-table td {
+th,
+td {
   border: 1px solid #ccc;
   padding: 5px;
 }
 
-.food-table th {
+th {
   background-color: #f2f2f2;
   text-align: left;
 }
 
-.food-table tr:nth-child(even) {
+tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-.food-table tr:hover {
+tr:hover {
   background-color: #e5e5e5;
 }
-
-.food-table {
-  margin: 0 auto;
-}
-
