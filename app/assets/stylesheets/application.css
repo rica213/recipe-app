@@ -146,6 +146,8 @@ nav li {
 
 .food-btn {
   padding: 5px;
+  margin-left: 5rem;
+  margin-bottom: 1.5rem;
 }
 
 .food-form {
@@ -160,3 +162,31 @@ nav li {
   justify-content: center;
   align-items: center;
 }
+
+.food-table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.food-table th, .food-table td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.food-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.food-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.food-table tr:hover {
+  background-color: #e5e5e5;
+}
+
+.food-table {
+  margin: 0 auto;
+}
+
