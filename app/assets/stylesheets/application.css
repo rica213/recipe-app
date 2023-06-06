@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+.user-reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.user-fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
