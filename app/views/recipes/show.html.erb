@@ -1,5 +1,14 @@
 <main>
   <h1><%= @recipe.name %></h1>
+  <section>
+    <% if can? :toggle_public, @recipe %>
+      <% if @recipe.public %>
+        <%= link_to 'Make Private', toggle_public_recipe_path(@recipe), method: :patch %>
+      <% else %>
+        <%= link_to 'Make Public', toggle_public_recipe_path(@recipe), method: :patch %>
+      <% end %>
+    <% end %>
+  </section>
   <section class="recipe_detail">
     <p> Preparation Time: <%= @recipe.preparation_time %> hour </p>
     <p> Cooking Time: <%= @recipe.cooking_time %> hour </p>
