@@ -1,4 +1,3 @@
 class UsersController < ApplicationController
-  def shopping_list
-  end
+  def shopping_list; end
 end
