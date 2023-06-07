@@ -33,7 +33,6 @@ class RecipesController < ApplicationController
 
   def public_recipes; end
 
-
   private
 
   def recipe_params
