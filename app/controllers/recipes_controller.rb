@@ -1,7 +1,11 @@
 class RecipesController < ApplicationController
   def index; end
 
-  def show; end
+  # recipes#show ___ GET /recipes/:id
+  def show
+    @recipe = Recipe.find(param[:id])
+    @foods = @recipe.foods
+  end
 
   def new; end
 
