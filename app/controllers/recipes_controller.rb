@@ -1,6 +1,8 @@
 class RecipesController < ApplicationController
   def index
     @recipes = current_user.recipes
+  rescue NoMethodError
+    redirect_to new_user_session_path
   end
 
   def show
