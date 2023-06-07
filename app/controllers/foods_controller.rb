@@ -1,6 +1,8 @@
 class FoodsController < ApplicationController
   def index
     @foods = current_user.foods
+  rescue NoMethodError
+    redirect_to new_user_session_path
   end
 
   def new
@@ -15,6 +17,8 @@ class FoodsController < ApplicationController
     else
       render :new
     end
+  rescue NoMethodError
+    redirect_to root_path
   end
 
   def destroy
