@@ -143,3 +143,47 @@ nav li {
   flex-direction: column;
   row-gap: 1rem;
 }
+
+.food-btn {
+  padding: 5px;
+  margin-left: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.food-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.add-food-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0 auto;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e5e5e5;
+}

@@ -13,7 +13,7 @@
       <%= link_to "RecipeApp", root_path, class: 'logo' %>
       <nav id="desktop-nav" class="hidden">
         <ul class="menu_pages">
-          <li><%= link_to "Public Recipes", {controller: 'recipes', action: 'public_recipes'} %></li>
+          <li><%= link_to "Public Recipes", public_recipes_path %></li>
           <li><%= link_to "Recipes", recipes_path %></li>
           <li><%= link_to "Foods", foods_path %></li>
         </ul>
@@ -23,7 +23,8 @@
           <% else %>
             <li><%= link_to "Sign up", new_user_registration_path %></li>
             <li><%= link_to "Sign in", user_session_path %></li>
-          <% end %>
+            <% end %>
+  
           </ul>
         </nav>
         <menu class="toggle_menu">
