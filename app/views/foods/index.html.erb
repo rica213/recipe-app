@@ -1,2 +1,32 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<head>
+  <%= stylesheet_link_tag 'application.css'%>
+</head>
+
+ <div class="food-table">
+    <button class="food-btn">
+        <%= link_to 'Add Food', new_food_path %>
+    </button>
+
+    <table class="food-table">
+        <thead>
+            <tr>
+                <th>Name<th>
+                <th>Measurement_unit<th>
+                <th>Price<th>
+                <th>Quantity<th>
+                <th>Actions<th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @foods.each do |food| %>
+                <tr>
+                    <td><%= food.name %><td>
+                    <td><%= food.measurement_unit %><td>
+                    <td><%= food.price %><td>
+                    <td><%= food.quantity %><td>
+                    <td><%= button_to 'Delete', food, method: :delete %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+ </div>
