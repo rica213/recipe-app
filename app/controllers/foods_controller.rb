@@ -11,13 +11,12 @@ class FoodsController < ApplicationController
 
   def create
     @food = current_user.foods.new(food_params)
-    
+
     if @food.save
       redirect_to foods_path, notice: 'Food created successfully'
     else
       render :new
     end
-    
   rescue NoMethodError
     redirect_to root_path
   end
@@ -32,7 +31,7 @@ class FoodsController < ApplicationController
     else
       render :edit
     end
-  end 
+  end
 
   def destroy
     @food = current_user.foods.find(params[:id])
