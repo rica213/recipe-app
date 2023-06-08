@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, :update_allowed_parameters, if: :devise_controller?
 
   def handle_routing_error
-    flash[:error] = "Invalid URL"
+    flash[:error] = 'Invalid URL'
     redirect_to root_path
   end
 

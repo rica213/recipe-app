@@ -11,22 +11,18 @@ class RecipeFoodsController < ApplicationController
     @recipe_food = @recipe.recipe_foods.create(recipe_food_params)
 
     if @recipe_food.save
-      flash[:success] = "Ingredient added successfully"
+      flash[:success] = 'Ingredient added successfully'
       redirect_to @recipe
     else
-      flash[:error] = "Error adding ingredient"
+      flash[:error] = 'Error adding ingredient'
       render :new
     end
   end
 end
 
-def edit
+def edit; end
 
-end
-
-def update
-
-end
+def update; end
 
 private
 
