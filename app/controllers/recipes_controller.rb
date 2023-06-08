@@ -58,7 +58,7 @@ class RecipesController < ApplicationController
     @recipe.toggle_public
     redirect_to @recipe
   end
-    
+
   private
 
   def recipe_params
