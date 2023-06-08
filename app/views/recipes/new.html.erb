@@ -1,8 +1,4 @@
-<head>
-  <%= stylesheet_link_tag 'application.css'%>
-</head>
-
-<div class="add-food-form">
+ <div class="add-food-form">
     <h2>Add New Recipe</h2><br>
 
     <%= form_with model: @recipe, method: :post, local: true do |f| %>

@@ -1,20 +1,4 @@
-<head>
-  <%= stylesheet_link_tag 'application.css'%>
-</head>
-
-<div class="recipe-section">
-<h2 class="public-recipe-name">Public recipes</h2>
-     
-    <% @recipes.each do |recipe| %>
-        <div class="recipe-container">
-            <div class="recipe-item">
-                <p><%=link_to recipe.name, recipe_path(recipe.id) %></p>
-                <p>By <%= recipe.user.name %></p>
-            </div>
-            <div>
-                <p class="recipe-text">Total food items: <%= recipe.recipe_foods.length %></p>
-                <p>Total price: <%= recipe.recipe_foods.sum { |food| food.quantity * food.food.price } %></p>
-            </div>
-        </div>
-    <% end %>
+ <div class="recipe-section">
+ <h2 class="public-recipe-name">Public recipes</h2>
+    <%= render partial: 'shared/recipe' %>
 </div>
