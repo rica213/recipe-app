@@ -1,2 +1,19 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<head>
+  <%= stylesheet_link_tag 'application.css'%>
+</head>
+
+<div class="recipe-section">
+    <button class="food-btn">
+        <%= link_to 'Add Recipe', new_recipe_path %>
+    </button>
+
+    <% @recipes.each do |recipe| %>
+        <div class="recipe-container">
+            <div class="recipe-item">
+                <p><%=link_to recipe.name, recipe_path(recipe.id) %></p>
+                <%= button_to 'Remove', recipe, method: :delete %>
+            </div>
+            <p class="recipe-text"><%= recipe.description %></p>
+        </div>
+    <% end %>
+</div>

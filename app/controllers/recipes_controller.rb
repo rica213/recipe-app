@@ -12,22 +12,41 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
-  def index; end
-
   # recipes#show ___ GET /recipes/:id
   def show
     @recipe = Recipe.includes(:foods).find(params[:id])
     @foods = @recipe.foods
-  rescue ActiveRecord::RecordNotFound
-    flash[:error] = 'Recipe not found.'
-    redirect_to recipes_path
   end
 
-  def new; end
+  def index
+    @recipes = current_user.recipes
+  rescue NoMethodError
+    redirect_to new_user_session_path
+  end
 
-  def create; end
+  def new
+    @recipe = Recipe.new
+  end
 
-  def destroy; end
+  def create
+    @recipe = current_user.recipes.new(recipe_params)
+
+    if @recipe.save
+      redirect_to recipes_path, notice: 'Recipes created successfully'
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @recipe = current_user.recipes.find(params[:id])
+
+    if @recipe.destroy
+      redirect_to recipes_path, notice: 'Recipe has been removed'
+    else
+      redirect_to recipes_path, notice: 'Recipes coould not be deleted'
+    end
+  end
 
   def public_recipes; end
 
@@ -38,5 +57,11 @@ class RecipesController < ApplicationController
 
     @recipe.toggle_public
     redirect_to @recipe
+  end
+    
+  private
+
+  def recipe_params
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description)
   end
 end
