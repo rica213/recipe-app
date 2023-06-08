@@ -29,11 +29,13 @@ class RecipesController < ApplicationController
     if @recipe.destroy
       redirect_to recipes_path, notice: 'Recipe has been removed'
     else
-      redirect_to recipes_path, notice: 'Recipes coould not be deleted'
+      redirect_to recipes_path, notice: 'Recipes could not be deleted'
     end
   end
 
-  def public_recipes; end
+  def public_recipes
+    @recipes = Recipe.where(public: true).includes(:user, recipe_foods: :food).order(created_at: :desc)
+  end
 
   private
 

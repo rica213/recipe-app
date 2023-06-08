@@ -216,3 +216,7 @@ tr:hover {
 .recipe-text {
   width: 10rem;
 }
+
+.public-recipe-name {
+  margin-bottom: 2rem;
+}
