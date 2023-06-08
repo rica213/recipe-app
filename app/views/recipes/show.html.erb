@@ -16,7 +16,8 @@
   </section>
   <section class="actions_container">
     <%= link_to 'Generate Shop List', users_shopping_list_path, class: 'action_link' %>
-    <%= link_to 'Add Ingredient', new_food_path, class: 'action_link' %>
+    <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe), class: 'action_link' %>
+
   </section>
   <table class="food-table">
     <thead>

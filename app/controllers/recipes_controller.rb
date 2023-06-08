@@ -1,6 +1,17 @@
 class RecipesController < ApplicationController
   load_and_authorize_resource
 
+  # Errors handling
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    flash[:error] = "Recipe not found."
+    redirect_to recipes_path
+  end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "You are not authorized to perform this action."
+    redirect_to recipes_path
+  end
+
   def index; end
 
   # recipes#show ___ GET /recipes/:id

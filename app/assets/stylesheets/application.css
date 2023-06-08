@@ -184,6 +184,21 @@ nav li {
 
 /* end recipe detail */
 
+/* start new ingredient */
+
+.new_ingredient_form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.new_ingredient_form input {
+  padding: 0.5rem;
+}
+
+/* end new ingredient */
+
 .food-btn {
   padding: 5px;
   margin-left: 5rem;
