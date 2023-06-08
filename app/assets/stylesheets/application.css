@@ -187,3 +187,32 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #e5e5e5;
 }
+
+/* recipe section styling */
+
+.recipe-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-container {
+  border: 1px solid gold;
+  width: 35%;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.recipe-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.recipe-text {
+  width: 10rem;
+}
