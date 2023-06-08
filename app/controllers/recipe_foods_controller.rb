@@ -10,7 +10,7 @@ class RecipeFoodsController < ApplicationController
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = @recipe.recipe_foods.create(recipe_food_params)
 
-    if @recipe_food.persisted?
+    if @recipe_food.save
       flash[:success] = "Ingredient added successfully"
       redirect_to @recipe
     else
@@ -20,8 +20,16 @@ class RecipeFoodsController < ApplicationController
   end
 end
 
+def edit
+
+end
+
+def update
+
+end
+
 private
 
 def recipe_food_params
-  params.require(:recipe_food).permit(:food_id, :quantity)
+  params.permit(:food_id, :quantity)
 end

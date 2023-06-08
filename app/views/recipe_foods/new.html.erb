@@ -1,17 +1,19 @@
 <main>
-<h1> Add new Ingredient </h1>
-<%= form_with(url: recipe_recipe_foods_path(@recipe), method: :post, local: true, class: 'new_ingredient_form') do |form|  %>
+  <h1> Add new Ingredient </h1>
+  <%= form_with(url: recipe_recipe_foods_path(@recipe), method: :post, local: true, class: 'new_ingredient_form') do |form|  %>
+    <% if @recipe_food.errors.any? %>
+      <div>
+        <% @recipe_food.errors.full_messages.each do |message| %>
+          <div><%= message.inspect %></div>
+        <% end %>
+      </div>
+    <% end %>
     <%= form.label :food_name %>
-    <%= form.text_field :food_name %>
-  
+    <%= form.number_field :food_id %>
     <%= form.label :quantity %>
     <%= form.text_field :quantity %>
-  
-    <%= form.label :value %>
-    <%= form.text_field :value %>
-  
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
 </main>

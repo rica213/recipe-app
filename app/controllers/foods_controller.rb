@@ -21,18 +21,6 @@ class FoodsController < ApplicationController
     redirect_to root_path
   end
 
-  def edit
-    @food = Food.find(params[:id])
-  end
-
-  def update
-    if @food.update(food_params)
-      redirect_to @food, notice: 'Food was successfully updated.'
-    else
-      render :edit
-    end
-  end
-
   def destroy
     @food = current_user.foods.find(params[:id])
 

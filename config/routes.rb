@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'recipe_foods/create'
   devise_for :users
   root "recipes#public_recipes"
   
@@ -8,9 +7,9 @@ Rails.application.routes.draw do
       patch :toggle_public
     end
 
-    resources :recipe_foods, only: [:new, :create]
+    resources :recipe_foods, only: [:new, :create, :edit, :update, :destroy]
   end
-  resources :foods, only: [:index, :new, :create, :destroy, :edit, :update,]
+  resources :foods, only: [:index, :new, :create, :destroy]
   
   get 'users/shopping_list'
   match 'public_recipes', to: "recipes#public_recipes", via: :get

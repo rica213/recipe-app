@@ -16,8 +16,13 @@ class RecipesController < ApplicationController
 
   # recipes#show ___ GET /recipes/:id
   def show
+    begin
     @recipe = Recipe.includes(:foods).find(params[:id])
     @foods = @recipe.foods
+    rescue ActiveRecord::RecordNotFound
+      flash[:error] = "Recipe not found."
+      redirect_to recipes_path
+    end
   end
 
   def new; end
