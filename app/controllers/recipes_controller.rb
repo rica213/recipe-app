@@ -1,12 +1,27 @@
 class RecipesController < ApplicationController
+  load_and_authorize_resource
+
+  # Errors handling
+  rescue_from ActiveRecord::RecordNotFound do |_exception|
+    flash[:error] = 'Recipe not found.'
+    redirect_to recipes_path
+  end
+
+  rescue_from CanCan::AccessDenied do |_exception|
+    flash[:error] = 'You are not authorized to perform this action.'
+    redirect_to recipes_path
+  end
+
+  # recipes#show ___ GET /recipes/:id
+  def show
+    @recipe = Recipe.includes(:foods).find(params[:id])
+    @foods = @recipe.foods
+  end
+
   def index
     @recipes = current_user.recipes
   rescue NoMethodError
     redirect_to new_user_session_path
-  end
-
-  def show
-    @recipe = current_user.recipes.find(params[:id])
   end
 
   def new
@@ -35,6 +50,15 @@ class RecipesController < ApplicationController
 
   def public_recipes
     @recipes = Recipe.where(public: true).includes(:user, recipe_foods: :food).order(created_at: :desc)
+  end
+
+  # recipes#toggle_public ____ PATCH /recipes/:id/toggle_public
+  def toggle_public
+    @recipe = Recipe.find(params[:id])
+    authorize! :toggle_public, @recipe
+
+    @recipe.toggle_public
+    redirect_to @recipe
   end
 
   private
