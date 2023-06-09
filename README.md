@@ -33,6 +33,10 @@
 It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. <br>
 Also, the app should allow you to make them public so anyone can access them.
 
+The data model is based on the Entity Relationship Diagram (ERD) below 👇 👇
+
+![recipe_erd_2_members](https://github.com/rica213/recipe-app/assets/10439283/814a6c24-5a3b-4226-b298-cf347c5a9e6d)
+
 # 🛠 Built With <a name="built-with"></a>
 
 ## 📌 Tech Stack <a name="tech-stack"></a>
@@ -50,7 +54,13 @@ Also, the app should allow you to make them public so anyone can access them.
 
 # 🎲 Key Features <a name="key-features"></a>
 
- **Coming Soon**
+ - A login page.
+ - A registration page.
+ - A food list (with all CRUD implementation, except for 'update').
+ - A recipes list (with all CRUD implementation, except for 'update').
+ - A general shopping list view (all missing food for all your recipes and total price).
+ - A list of all public recipes from other users with their names and total prices.
+ - A navigation menu that allows users to open all of the pages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,10 +110,6 @@ rails db:create
 rails db:migrate
 ```
 
-```sh
-rails db:seed
-```
-
 ## Usage
 
 To run the project, execute the following command:
@@ -147,7 +153,13 @@ To run tests, run the following command:
 
 # 🔭 Future Features <a name="future-features"></a>
 
- **Coming soon**
+  - Add styling to all the pages
+  - Implement edit ingredient
+  - Implement delete ingredient
+  - Implement edit recipe
+  - Implement edit food
+  - Deploy project
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -164,7 +176,15 @@ Feel free to check the [issues page](../../issues/).
 
 # ⭐️ Show your support <a name="support"></a>
 
-If you like this project kindly show some love, give it a 🌟 **STAR** 🌟
+Your support is crucial to the success of this project! There are ways you can contribute and show your support:
+
+- Provide Feedback: If you've tried out the project or have any suggestions for improvement, we would love to hear from you. Your feedback is invaluable in shaping the future direction of the project.
+
+- Kindly Give a 🌟 STAR 🌟 if you like this project!
+
+Remember, your support matters! Whether it's spreading the word, providing feedback, reporting issues, contributing code, or making a donation, every action makes a difference. Together, we can make this project even better.
+
+Thank you for your support and for being a part of this journey! ❤️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,6 +195,10 @@ If you like this project kindly show some love, give it a 🌟 **STAR** 🌟
 I would like to thank: 
 - Microverse
 - Code Reviewers
+- Peers who debated with us about the project requirements 🤩 
+  - [Racheal](https://github.com/coderacheal) 👧🏾
+  - [Frempong](https://github.com/frempongdev) 😎
+  - [Joseph](https://github.com/Zeph180) 🤭
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
