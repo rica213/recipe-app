@@ -7,7 +7,6 @@ RSpec.describe 'Foods', type: :request do
                             public: true, user_id: @user.id)
     @food = Food.create(name: 'beans', measurement_unit: 'percs', price: 12, quantity: 22, user_id: @user.id)
     @recipe_food = RecipeFood.create(quantity: 30, food_id: @food.id, recipe_id: @recipe.id)
-    
   end
 
   describe 'GET /index' do
