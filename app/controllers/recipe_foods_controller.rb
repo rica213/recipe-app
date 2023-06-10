@@ -32,11 +32,13 @@ class RecipeFoodsController < ApplicationController
       redirect_to root
     end
   end
+
+  private
+  
+  def recipe_food_params
+    params.require(:recipe_food).permit(:recipe_id, :food_id, :quantity)
+  end
+  
 end
 
 
-private
-
-def recipe_food_params
-  params.require(:recipe_food).permit(:recipe_id, :food_id, :quantity)
-end
