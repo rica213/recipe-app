@@ -1,0 +1,277 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html {
+  font-size: calc(15px + 0.390625vw);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.action_link {
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 0.25rem;
+  color: currentColor;
+  cursor: pointer;
+}
+
+/* start navigation toolbar */
+header,
+nav,
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  width: 75%;
+}
+
+.logo,
+nav li {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.toggle_menu {
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.line {
+  border: 1px solid black;
+}
+
+.popup-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #3c3a39;
+  color: white;
+  width: 100%;
+  z-index: 2;
+  padding-top: 3rem;
+}
+
+.popup-menu li {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: left;
+  padding: 1rem 1.75rem;
+}
+
+.popup-menu li::after {
+  content: '';
+  width: 100%;
+  border-bottom: 0.5px solid;
+  display: block;
+  padding: 0.25rem;
+  color: #6f6c6b;
+}
+
+.popup-menu a {
+  color: #fff5e1;
+}
+
+.menu_authentication,
+.menu_pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.75rem;
+}
+
+@media all and (min-width: 720px) {
+  #desktop-nav {
+    display: flex;
+  }
+
+  #desktop-nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  #desktop-nav li {
+    padding: 0 1rem;
+  }
+
+  .toggle_menu {
+    display: none;
+  }
+}
+
+/* end navigation toolbar */
+
+.user-reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.user-fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+/* start recipe detail */
+.actions_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+@media all and (min-width: 720px) {
+  .recipe_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .actions_container {
+    justify-content: space-between;
+  }
+}
+
+/* end recipe detail */
+
+/* start new ingredient */
+
+.new_ingredient_form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.new_ingredient_form input {
+  padding: 0.5rem;
+}
+
+/* end new ingredient */
+
+.food-btn {
+  padding: 5px;
+  margin-left: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.food-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.add-food-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 0 auto;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e5e5e5;
+}
+
+/* recipe section styling */
+
+.recipe-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-container {
+  border: 1px solid gold;
+  width: 35%;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.recipe-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.recipe-text {
+  width: 10rem;
+}
+
+.public-recipe-name {
+  margin-bottom: 2rem;
+}
