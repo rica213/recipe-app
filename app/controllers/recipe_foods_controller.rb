@@ -23,7 +23,7 @@ class RecipeFoodsController < ApplicationController
   # recipe_recipe_food DELETE /recipes/:recipe_id/recipe_foods/:id
   def destroy
     @recipe_food = RecipeFood.find(params[:id])
-  
+
     if @recipe_food.destroy
       flash[:success] = 'Ingredient removed successfully'
       redirect_to @recipe_food.recipe
@@ -34,11 +34,8 @@ class RecipeFoodsController < ApplicationController
   end
 
   private
-  
+
   def recipe_food_params
     params.require(:recipe_food).permit(:recipe_id, :food_id, :quantity)
   end
-  
 end
-
-
