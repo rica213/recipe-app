@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       patch :toggle_public
     end
 
-    resources :recipe_foods, only: [:new, :create]
+    resources :recipe_foods, only: [:new, :create, :destroy]
   end
   resources :foods, only: [:index, :new, :create, :destroy]
   

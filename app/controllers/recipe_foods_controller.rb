@@ -19,7 +19,21 @@ class RecipeFoodsController < ApplicationController
       render :new
     end
   end
+
+  # recipe_recipe_food DELETE /recipes/:recipe_id/recipe_foods/:id
+  def destroy
+    @recipe_food = RecipeFood.find(params[:id])
+  
+    if @recipe_food.destroy
+      flash[:success] = 'Ingredient removed successfully'
+      redirect_to @recipe_food.recipe
+    else
+      flash[:error] = 'Error removing ingredient'
+      redirect_to root
+    end
+  end
 end
+
 
 private
 
