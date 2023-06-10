@@ -24,8 +24,8 @@ RSpec.describe 'Food', type: :feature do
     it 'should render add ingredient form' do
       visit new_recipe_recipe_food_path(@recipe)
       expect(page).to have_content('Food name')
-      expect(page).to have_content('Quantity')
-      expect(page).to have_button('Save')
+      expect(page).to have_content('Ingredient quantity')
+      expect(page).to have_button('Add Ingredient')
     end
 
     it 'should show remove button in recipe show page' do
