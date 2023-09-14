@@ -1,21 +1,10 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 html {
   font-size: calc(15px + 0.390625vw);
+}
+
+html,
+body {
+  height: 100%;
 }
 
 * {
@@ -245,12 +234,27 @@ tr:hover {
 
 /* recipe section styling */
 
+/* public recipe start */
 .recipe-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
+  position: relative;
 }
+
+
+.public-recipe-name {
+  margin-bottom: 2rem;
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  color: white;
+  font-size: 2rem;
+}
+
+/* public recipe end */
 
 .recipe-container {
   border: 1px solid gold;
@@ -272,6 +276,29 @@ tr:hover {
   width: 10rem;
 }
 
-.public-recipe-name {
-  margin-bottom: 2rem;
+/* start authentication */
+.user-reg {
+  width: 80%;
+  margin: 20% auto;
+  padding: 1rem;
+  border: 3px solid #ece7e733;
+  border-radius: 5px;
+  box-shadow: 1px 5px #ece7e733;
+  background: #f6f9f966;
 }
+
+.field {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.new_user{
+  width: 80%;
+}
+
+.user-fields input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+/* end authentication */

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -23,17 +24,16 @@
           <% else %>
             <li><%= link_to "Sign up", new_user_registration_path %></li>
             <li><%= link_to "Sign in", user_session_path %></li>
-            <% end %>
-  
-          </ul>
-        </nav>
-        <menu class="toggle_menu">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </menu>
-      </header>
-      <%= yield %>
-      <script src="./../../../app/javascript/menu/menu_toggle.js"></script>
-    </body>
-  </html>
+          <% end %>
+        </ul>
+      </nav>
+      <menu class="toggle_menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </menu>
+    </header>
+    <%= yield %>
+    <script src="./../../../app/javascript/menu/menu_toggle.js"></script>
+  </body>
+</html>
